@@ -1,1 +1,50 @@
-<h1>Site Initnird - Port 4356</h1>
+	
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>🚀 INITNIRD TEST</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        h1 { font-size: 3em; margin-bottom: 20px; }
+        .box {
+            background: rgba(255,255,255,0.2);
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 600px;
+            margin: 30px auto;
+        }
+        .success { color: #4CAF50; font-weight: bold; }
+        .info { margin: 15px 0; }
+    </style>
+</head>
+<body>
+    <h1>🧪 INITNIRD TEST PAGE</h1>
+    
+    <div class="box">
+        <p class="success">✅ PORT 4356 ACTIF</p>
+        <p class="info">Domaine : initnird.lecarrie.fr</p>
+        <p class="info">Serveur : NGINX</p>
+        <p class="info">Date : <span id="date"></span></p>
+        <p class="info">IP : <span id="ip"></span></p>
+    </div>
+    
+    <script>
+        // Date actuelle
+        document.getElementById('date').textContent = new Date().toLocaleString();
+        
+        // Affiche l'IP du visiteur
+        fetch('https://api.ipify.org?format=json')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('ip').textContent = data.ip;
+            });
+    </script>
+</body>
+</html><h1>Site Initnird - Port 4356</h1>
